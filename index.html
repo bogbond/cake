@@ -29,6 +29,9 @@
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
 
+   <!-- Подключаем библиотеку Axios для работы с HTTP запросами -->
+   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
 </head>
 
 <body class="index-page">
@@ -85,153 +88,6 @@
 
     </section><!-- /Hero Section -->
 
-    <!-- About Section -->
-    <section id="about" class="about section">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>About Us<br></h2>
-        <p><span>Learn More</span> <span class="description-title">About Us</span></p>
-      </div><!-- End Section Title -->
-
-      <div class="container">
-
-        <div class="row gy-4">
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-            <img src="assets/img/about.jpg" class="img-fluid mb-4" alt="">
-            <a href ="https://www.instagram.com/itsacheekycake/">
-              <div class="book-a-table">
-              <h3>Instagram</h3>
-              <!-- <p>+1 5589 55488 55</p> -->
-            </div>
-          </a>
-          </div>
-          <div class="col-lg-5" data-aos="fade-up" data-aos-delay="250">
-            <div class="content ps-0 ps-lg-5">
-              <!-- <p class="fst-italic">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                magna aliqua.
-              </p>
-              <ul>
-                <li><i class="bi bi-check-circle-fill"></i> <span>Ullamco laboris nisi ut aliquip ex ea commodo consequat.</span></li>
-                <li><i class="bi bi-check-circle-fill"></i> <span>Duis aute irure dolor in reprehenderit in voluptate velit.</span></li>
-                <li><i class="bi bi-check-circle-fill"></i> <span>Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate trideta storacalaperda mastiro dolore eu fugiat nulla pariatur.</span></li>
-              </ul> -->
-              <h4>
-                Indulge in handcrafted delights
-              </h4>
-              <br><br)
-              <p>At It's a Cheeky Cake, I pour my heart and soul into every confection I create. From stunning celebration cakes to mouth-watering cupcakes and a variety of irresistible desserts, my passion for baking shines through in every bite. Each creation is meticulously crafted, ensuring that you receive a truly unique and delicious masterpiece.
-                <br><br>So, why not treat yourself to a bespoke, made-to-order cake that will make your taste buds dance and create sweet memories that will be cherished for a lifetime. Contact me today and let's start baking magic together!</p>
-
-              <div class="position-relative mt-4">
-                <img src="assets/img/about2.jpg" class="img-fluid" alt="">
-                <a href="https://www.youtube.com/watch?v=LXb3EKWsInQ" class="glightbox pulsating-play-btn"></a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-
-    </section><!-- /About Section -->
-
-    <!-- Why Us Section -->
-    <section id="why-us" class="why-us section light-background">
-
-      <div class="container">
-
-        <div class="row gy-4">
-
-          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
-            <div class="why-box">
-              <h3>Why Choose Cheeky Cake</h3>
-              <p>
-                At Cheeky Cake, we believe that every celebration deserves a touch of sweetness and artistry. Our creations are not just desserts; they are edible works of art crafted with love and meticulous attention to detail. Let us make your special moments unforgettable with our exquisite cakes and cupcakes.
-              <div class="text-center">
-                <a href="#" class="more-btn"><span>Learn More</span> <i class="bi bi-chevron-right"></i></a>
-              </div>
-            </div>
-          </div><!-- End Why Box -->
-
-          <div class="col-lg-8 d-flex align-items-stretch">
-            <div class="row gy-4" data-aos="fade-up" data-aos-delay="300">
-
-              <div class="col-xl-4">
-                <div class="icon-box d-flex flex-column justify-content-center align-items-center">
-                  <!-- <i class="bi bi-clipboard-data"></i> -->
-                  <h4>Edible Works of Art</h4>
-                  <p>Each cake from Cheeky Cake is a masterpiece, beautifully decorated to match your unique theme or style. From birthdays to weddings, our cakes are crafted to be the memorable centerpiece of your celebration.</p>
-                </div>
-              </div><!-- End Icon Box -->
-
-              <div class="col-xl-4" data-aos="fade-up" data-aos-delay="400">
-                <div class="icon-box d-flex flex-column justify-content-center align-items-center">
-                  <!-- <i class="bi bi-gem"></i> -->
-                  <h4>Unforgettable Cupcake Delights</h4>
-                  <p>Indulge in bite-sized bliss with our scrumptious cupcakes. Perfect for any occasion, each cupcake is baked to perfection and finished with flavorful frosting and delightful decorations, ensuring a treat that will satisfy every sweet tooth.</p>
-                </div>
-              </div><!-- End Icon Box -->
-
-              <div class="col-xl-4" data-aos="fade-up" data-aos-delay="500">
-                <div class="icon-box d-flex flex-column justify-content-center align-items-center">
-                  <!-- <i class="bi bi-inboxes"></i> -->
-                  <h4>Affordable Elegance</h4>
-                  <p>Experience the magic of Cheeky Cake without breaking the bank. Our celebration cakes start from just £70, and our delectable cupcakes are available at £25 for a dozen. Quality and beauty are always within reach, making your special day even more memorable.</p>
-                </div>
-              </div><!-- End Icon Box -->
-
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-
-    </section><!-- /Why Us Section -->
-
-    <!-- Stats Section -->
-    <section id="stats" class="stats section dark-background">
-
-      <img src="assets/img/stats-bg.jpg" alt="" data-aos="fade-in">
-
-      <div class="container position-relative" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="row gy-4">
-
-          <div class="col-lg-3 col-md-6">
-            <div class="stats-item text-center w-100 h-100">
-              <span data-purecounter-start="0" data-purecounter-end="402" data-purecounter-duration="1" class="purecounter"></span>
-              <p>Clients</p>
-            </div>
-          </div><!-- End Stats Item -->
-
-          <div class="col-lg-3 col-md-6">
-            <div class="stats-item text-center w-100 h-100">
-              <span data-purecounter-start="0" data-purecounter-end="221" data-purecounter-duration="1" class="purecounter"></span>
-              <p>Cakes</p>
-            </div>
-          </div><!-- End Stats Item -->
-
-          <div class="col-lg-3 col-md-6">
-            <div class="stats-item text-center w-100 h-100">
-              <span data-purecounter-start="0" data-purecounter-end="896" data-purecounter-duration="1" class="purecounter"></span>
-              <p>Cupcakes</p>
-            </div>
-          </div><!-- End Stats Item -->
-
-          <div class="col-lg-3 col-md-6">
-            <div class="stats-item text-center w-100 h-100">
-              <span data-purecounter-start="0" data-purecounter-end="7" data-purecounter-duration="1" class="purecounter"></span>
-              <p>Awards</p>
-            </div>
-          </div><!-- End Stats Item -->
-
-        </div>
-
-      </div>
-
-    </section><!-- /Stats Section -->
 
     <!-- Menu Section -->
     <section id="menu" class="menu section">
@@ -592,6 +448,155 @@
 
     </section><!-- /Menu Section -->
 
+        <!-- About Section -->
+        <section id="about" class="about section">
+
+          <!-- Section Title -->
+          <div class="container section-title" data-aos="fade-up">
+            <h2>About Us<br></h2>
+            <p><span>Learn More</span> <span class="description-title">About Us</span></p>
+          </div><!-- End Section Title -->
+    
+          <div class="container">
+    
+            <div class="row gy-4">
+              <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+                <img src="assets/img/about.jpg" class="img-fluid mb-4" alt="">
+                <a href ="https://www.instagram.com/itsacheekycake/">
+                  <div class="book-a-table">
+                  <h3>Instagram</h3>
+                  <!-- <p>+1 5589 55488 55</p> -->
+                </div>
+              </a>
+              </div>
+              <div class="col-lg-5" data-aos="fade-up" data-aos-delay="250">
+                <div class="content ps-0 ps-lg-5">
+                  <!-- <p class="fst-italic">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+                    magna aliqua.
+                  </p>
+                  <ul>
+                    <li><i class="bi bi-check-circle-fill"></i> <span>Ullamco laboris nisi ut aliquip ex ea commodo consequat.</span></li>
+                    <li><i class="bi bi-check-circle-fill"></i> <span>Duis aute irure dolor in reprehenderit in voluptate velit.</span></li>
+                    <li><i class="bi bi-check-circle-fill"></i> <span>Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate trideta storacalaperda mastiro dolore eu fugiat nulla pariatur.</span></li>
+                  </ul> -->
+                  <h4>
+                    Indulge in handcrafted delights
+                  </h4>
+                  <br><br)
+                  <p>At It's a Cheeky Cake, I pour my heart and soul into every confection I create. From stunning celebration cakes to mouth-watering cupcakes and a variety of irresistible desserts, my passion for baking shines through in every bite. Each creation is meticulously crafted, ensuring that you receive a truly unique and delicious masterpiece.
+                    <br><br>So, why not treat yourself to a bespoke, made-to-order cake that will make your taste buds dance and create sweet memories that will be cherished for a lifetime. Contact me today and let's start baking magic together!</p>
+    
+                  <div class="position-relative mt-4">
+                    <img src="assets/img/about2.jpg" class="img-fluid" alt="">
+                    <a href="https://www.youtube.com/watch?v=LXb3EKWsInQ" class="glightbox pulsating-play-btn"></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+    
+          </div>
+    
+        </section><!-- /About Section -->
+    
+        <!-- Why Us Section -->
+        <section id="why-us" class="why-us section light-background">
+    
+          <div class="container">
+    
+            <div class="row gy-4">
+    
+              <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                <div class="why-box">
+                  <h3>Why Choose Cheeky Cake</h3>
+                  <p>
+                    At Cheeky Cake, we believe that every celebration deserves a touch of sweetness and artistry. Our creations are not just desserts; they are edible works of art crafted with love and meticulous attention to detail. Let us make your special moments unforgettable with our exquisite cakes and cupcakes.
+                  <div class="text-center">
+                    <a href="#" class="more-btn"><span>Learn More</span> <i class="bi bi-chevron-right"></i></a>
+                  </div>
+                </div>
+              </div><!-- End Why Box -->
+    
+              <div class="col-lg-8 d-flex align-items-stretch">
+                <div class="row gy-4" data-aos="fade-up" data-aos-delay="300">
+    
+                  <div class="col-xl-4">
+                    <div class="icon-box d-flex flex-column justify-content-center align-items-center">
+                      <!-- <i class="bi bi-clipboard-data"></i> -->
+                      <h4>Edible Works of Art</h4>
+                      <p>Each cake from Cheeky Cake is a masterpiece, beautifully decorated to match your unique theme or style. From birthdays to weddings, our cakes are crafted to be the memorable centerpiece of your celebration.</p>
+                    </div>
+                  </div><!-- End Icon Box -->
+    
+                  <div class="col-xl-4" data-aos="fade-up" data-aos-delay="400">
+                    <div class="icon-box d-flex flex-column justify-content-center align-items-center">
+                      <!-- <i class="bi bi-gem"></i> -->
+                      <h4>Unforgettable Cupcake Delights</h4>
+                      <p>Indulge in bite-sized bliss with our scrumptious cupcakes. Perfect for any occasion, each cupcake is baked to perfection and finished with flavorful frosting and delightful decorations, ensuring a treat that will satisfy every sweet tooth.</p>
+                    </div>
+                  </div><!-- End Icon Box -->
+    
+                  <div class="col-xl-4" data-aos="fade-up" data-aos-delay="500">
+                    <div class="icon-box d-flex flex-column justify-content-center align-items-center">
+                      <!-- <i class="bi bi-inboxes"></i> -->
+                      <h4>Affordable Elegance</h4>
+                      <p>Experience the magic of Cheeky Cake without breaking the bank. Our celebration cakes start from just £70, and our delectable cupcakes are available at £25 for a dozen. Quality and beauty are always within reach, making your special day even more memorable.</p>
+                    </div>
+                  </div><!-- End Icon Box -->
+    
+                </div>
+              </div>
+    
+            </div>
+    
+          </div>
+    
+        </section><!-- /Why Us Section -->
+    
+        <!-- Stats Section -->
+        <section id="stats" class="stats section dark-background">
+    
+          <img src="assets/img/stats-bg.jpg" alt="" data-aos="fade-in">
+    
+          <div class="container position-relative" data-aos="fade-up" data-aos-delay="100">
+    
+            <div class="row gy-4">
+    
+              <div class="col-lg-3 col-md-6">
+                <div class="stats-item text-center w-100 h-100">
+                  <span data-purecounter-start="0" data-purecounter-end="402" data-purecounter-duration="1" class="purecounter"></span>
+                  <p>Clients</p>
+                </div>
+              </div><!-- End Stats Item -->
+    
+              <div class="col-lg-3 col-md-6">
+                <div class="stats-item text-center w-100 h-100">
+                  <span data-purecounter-start="0" data-purecounter-end="221" data-purecounter-duration="1" class="purecounter"></span>
+                  <p>Cakes</p>
+                </div>
+              </div><!-- End Stats Item -->
+    
+              <div class="col-lg-3 col-md-6">
+                <div class="stats-item text-center w-100 h-100">
+                  <span data-purecounter-start="0" data-purecounter-end="896" data-purecounter-duration="1" class="purecounter"></span>
+                  <p>Cupcakes</p>
+                </div>
+              </div><!-- End Stats Item -->
+    
+              <div class="col-lg-3 col-md-6">
+                <div class="stats-item text-center w-100 h-100">
+                  <span data-purecounter-start="0" data-purecounter-end="7" data-purecounter-duration="1" class="purecounter"></span>
+                  <p>Awards</p>
+                </div>
+              </div><!-- End Stats Item -->
+    
+            </div>
+    
+          </div>
+    
+        </section><!-- /Stats Section -->
+    
+
     <!-- Testimonials Section -->
     <section id="testimonials" class="testimonials section light-background">
 
@@ -819,27 +824,102 @@
             <form action="forms/book-a-table.php" method="post" role="form" class="php-email-form">
               <div class="row gy-4">
                 <div class="col-lg-4 col-md-6">
+                  <label for="date" class="form-label">Full Name</label>
                   <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required="">
                 </div>
                 <div class="col-lg-4 col-md-6">
+                  <label for="date" class="form-label">Your Email adress</label>
                   <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required="">
                 </div>
                 <div class="col-lg-4 col-md-6">
+                  <label for="date" class="form-label">Phone number</label>
                   <input type="text" class="form-control" name="phone" id="phone" placeholder="Your Phone" required="">
                 </div>
                 <div class="col-lg-4 col-md-6">
+                  <label for="date" class="form-label">Delivery/Pickup Date</label>
                   <input type="date" name="date" class="form-control" id="date" placeholder="Date" required="">
                 </div>
                 <div class="col-lg-4 col-md-6">
+                  <label for="date" class="form-label">Time</label>
                   <input type="time" class="form-control" name="time" id="time" placeholder="Time" required="">
                 </div>
                 <div class="col-lg-4 col-md-6">
-                  <input type="number" class="form-control" name="people" id="people" placeholder="# of people" required="">
+                  <label for="date" class="form-label">Cake Weight</label>
+                  <select class="form-control" name="cake_weight" id="cake_weight" required>
+                    <option class="form-control" value="" disabled selected>Select cake weight (kg)</option>
+                    <option value="1">1 kg</option>
+                    <option value="2">2 kg</option>
+                    <option value="3">3 kg</option>
+                    <option value="4">4 kg</option>
+                    <option value="5">5 kg</option>
+                    <option value="6">6 kg</option>
+                    <option value="7">7 kg</option>
+                  </select>
                 </div>
+
+                <div class="col-lg-4 col-md-6">
+                  <label for="date" class="form-label">Cake Type</label>
+                  <select class="form-control" name="cake_type" id="cake_type" required>
+                    <option value="" disabled selected>Select cake type</option>
+                    <option value="birthday_cake">Birthday Cake</option>
+                    <option value="birthday_cupcake">Birthday Cupcake</option>
+                    <option value="wedding_cake">Wedding Cake</option>
+                    <option value="wedding_cupcake">Wedding Cupcake</option>
+                    <option value="christmas_cake">Christmas Cake</option>
+                    <option value="pavlova_dessert">Pavlova Dessert</option>
+                    <option value="eclair_dessert">Eclair Dessert</option>
+                    <option value="victoria_sponge">Victoria Sponge</option>
+                    <option value="lemon_drizzle_cake">Lemon Drizzle Cake</option>
+                    <option value="carrot_cake">Carrot Cake</option>
+                    <option value="fruit_cake">Fruit Cake</option>
+                    <option value="scone">Scone</option>
+                  </select>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                  <label for="date" class="form-label">Cake Flavor</label>
+                  <select class="form-control" name="cake_flavor" id="cake_flavor" required>
+                    <option value="" disabled selected>Select cake flavor</option>
+                    <option value="vanilla">Vanilla</option>
+                    <option value="chocolate">Chocolate</option>
+                    <option value="red_velvet">Red Velvet</option>
+                    <option value="lemon">Lemon</option>
+                    <option value="carrot">Carrot</option>
+                    <option value="coffee">Coffee</option>
+                    <option value="almond">Almond</option>
+                    <option value="marble">Marble</option>
+                    <option value="spice">Spice</option>
+                    <option value="banana">Banana</option>
+                    <option value="coconut">Coconut</option>
+                    <option value="strawberry">Strawberry</option>
+                  </select>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                  <label for="date" class="form-label">Filling Flavor</label>
+                  <select class="form-control" name="filling_flavor" id="filling_flavor" required>
+                    <option value="" disabled selected>Select filling flavor</option>
+                    <option value="vanilla_buttercream">Vanilla Buttercream</option>
+                    <option value="chocolate_ganache">Chocolate Ganache</option>
+                    <option value="cream_cheese">Cream Cheese</option>
+                    <option value="lemon_curd">Lemon Curd</option>
+                    <option value="raspberry_jam">Raspberry Jam</option>
+                    <option value="strawberry_jam">Strawberry Jam</option>
+                    <option value="salted_caramel">Salted Caramel</option>
+                    <option value="coffee_buttercream">Coffee Buttercream</option>
+                    <option value="hazelnut">Hazelnut</option>
+                    <option value="mint_chocolate">Mint Chocolate</option>
+                    <option value="coconut_cream">Coconut Cream</option>
+                    <option value="oreo_cream">Oreo Cream</option>
+                  </select>
+                </div>
+                
+                
               </div>
 
               <div class="form-group mt-3">
-                <textarea class="form-control" name="message" rows="5" placeholder="Message"></textarea>
+                <label for="date" class="form-label">Your message</label>
+                <textarea class="form-control" name="message" rows="5" placeholder="Here you can specify all the necessary details and special requests."></textarea>
               </div>
 
               <div class="text-center mt-3">
@@ -1092,6 +1172,57 @@
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
 
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  
+  
+  <script>
+    const form = document.querySelector('.php-email-form');
+  
+    form.addEventListener('submit', function(event) {
+      event.preventDefault();
+  
+      // Собираем значения полей формы
+      const formData = new FormData(form);
+      let message = '';
+  
+      formData.forEach((value, key) => {
+        message += `${key}: ${value}\n\n`;
+      });
+  
+      // Добавляем тему письма
+      const subject = 'Cake Order'; // Задайте нужную вам тему письма
+  
+      // Отправка данных на FormSubmit.co
+      axios.post('https://formsubmit.co/bogbond@gmail.com', {
+        message: message,
+        subject: subject
+      })
+      .then(function(response) {
+        // Успешная отправка
+        console.log('Success:', response);
+        form.reset(); // Очистить форму после отправки
+        showSuccessMessage();
+      })
+      .catch(function(error) {
+        // Ошибка отправки
+        console.error('Error:', error);
+        showErrorMessage();
+      });
+    });
+  
+    // Показать сообщение об успешной отправке
+    function showSuccessMessage() {
+      const successMessage = form.querySelector('.sent-message');
+      successMessage.style.display = 'block';
+    }
+  
+    // Показать сообщение об ошибке
+    function showErrorMessage() {
+      const errorMessage = form.querySelector('.error-message');
+      errorMessage.style.display = 'block';
+    }
+  </script>
+  
 </body>
 
 </html>

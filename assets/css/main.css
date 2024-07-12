@@ -1476,6 +1476,8 @@ section,
 .book-a-table .php-email-form input[type=number],
 .book-a-table .php-email-form input[type=date],
 .book-a-table .php-email-form input[type=time],
+.book-a-table .php-email-form input[type=form-control],
+.book-a-table .php-email-form select,
 .book-a-table .php-email-form textarea {
   font-size: 14px;
   padding: 10px 15px;
@@ -1491,6 +1493,8 @@ section,
 .book-a-table .php-email-form input[type=number]:focus,
 .book-a-table .php-email-form input[type=date]:focus,
 .book-a-table .php-email-form input[type=time]:focus,
+.book-a-table .php-email-form input[type=form-control]:focus,
+.book-a-table .php-email-form select:focus,
 .book-a-table .php-email-form textarea:focus {
   border-color: var(--accent-color);
 }
@@ -1500,6 +1504,8 @@ section,
 .book-a-table .php-email-form input[type=number]::placeholder,
 .book-a-table .php-email-form input[type=date]::placeholder,
 .book-a-table .php-email-form input[type=time]::placeholder,
+.book-a-table .php-email-form input[type=form-control]::placeholder,
+.book-a-table .php-email-form select::placeholder,
 .book-a-table .php-email-form textarea::placeholder {
   color: color-mix(in srgb, var(--default-color), transparent 70%);
 }
@@ -1668,6 +1674,3 @@ section,
 /*--------------------------------------------------------------
 # Starter Section Section
 --------------------------------------------------------------*/
-.starter-section {
-  /* Add your styles here */
-}
