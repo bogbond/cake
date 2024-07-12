@@ -795,7 +795,7 @@
                 <div class="loading">Loading</div>
                 <div class="error-message"></div>
                 <div class="sent-message">Your booking request was sent. We will call back or send an Email to confirm your reservation. Thank you!</div>
-                <button type="submit">Order</button>
+                <button type="submit" id="orderButton">Order</button>
               </div>
             </form>
           </div><!-- End Reservation Form -->
@@ -1043,54 +1043,56 @@
 
   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   
-  
   <script>
-    const form = document.querySelector('#cakeOrderForm');
-  
-    form.addEventListener('submit', function(event) {
-      event.preventDefault();
-  
-      // Собираем значения полей формы
-      const formData = new FormData(form);
-      let message = '';
-  
-      formData.forEach((value, key) => {
-        message += `${key}: ${value}\n\n`;
-      });
-  
-      // Добавляем тему письма
-      const subject = 'Cake Order'; // Задайте нужную вам тему письма
-  
-      // Отправка данных на FormSubmit.co
-      axios.post('https://formsubmit.co/bogbond@gmail.com', {
-        message: message,
-        subject: subject
-      })
-      .then(function(response) {
-        // Успешная отправка
-        console.log('Success:', response);
-        form.reset(); // Очистить форму после отправки
-        showSuccessMessage();
-      })
-      .catch(function(error) {
-        // Ошибка отправки
-        console.error('Error:', error);
-        showErrorMessage();
-      });
+    document.addEventListener("DOMContentLoaded", function() {
+        const form = document.querySelector('#cakeOrderForm');
+        const orderButton = document.querySelector('#orderButton');
+    
+        orderButton.addEventListener('click', function(event) {
+            event.preventDefault();
+    
+            // Собираем значения полей формы
+            const formData = new FormData(form);
+            const data = {};
+            formData.forEach((value, key) => {
+                data[key] = value;
+            });
+    
+            // Добавляем тему письма
+            data.subject = 'Cake Order';
+    
+            // Отправка данных на FormSubmit.co
+            axios.post('https://formsubmit.co/bogbond@gmail.com', data)
+            .then(function(response) {
+                // Успешная отправка
+                console.log('Success:', response);
+                form.reset(); // Очистить форму после отправки
+                showSuccessMessage();
+            })
+            .catch(function(error) {
+                // Ошибка отправки
+                console.error('Error:', error);
+                showErrorMessage();
+            });
+        });
+    
+        // Показать сообщение об успешной отправке
+        function showSuccessMessage() {
+            const successMessage = document.querySelector('.sent-message');
+            successMessage.style.display = 'block';
+            setTimeout(() => successMessage.style.display = 'none', 5000); // скрыть через 5 секунд
+        }
+    
+        // Показать сообщение об ошибке
+        function showErrorMessage() {
+            const errorMessage = document.querySelector('.error-message');
+            errorMessage.style.display = 'block';
+            setTimeout(() => errorMessage.style.display = 'none', 5000); // скрыть через 5 секунд
+        }
     });
-  
-    // Показать сообщение об успешной отправке
-    function showSuccessMessage() {
-      const successMessage = form.querySelector('.sent-message');
-      successMessage.style.display = 'block';
-    }
-  
-    // Показать сообщение об ошибке
-    function showErrorMessage() {
-      const errorMessage = form.querySelector('.error-message');
-      errorMessage.style.display = 'block';
-    }
   </script>
+  
+    
   
 </body>
 
