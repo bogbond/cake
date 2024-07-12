@@ -690,30 +690,30 @@
           <div class="col-lg-4 reservation-img" style="background-image: url(assets/img/reservation.jpg);"></div>
 
           <div class="col-lg-8 d-flex align-items-center reservation-form-bg" data-aos="fade-up" data-aos-delay="200">
-            <form id="cakeOrderForm" class="php-email-form" action="">
+            <form id="cakeOrderForm" class="php-email-form">
               <div class="row gy-4">
                 <div class="col-lg-4 col-md-6">
-                  <label for="date" class="form-label">Full Name</label>
-                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required="">
+                  <label for="name" class="form-label">Full Name</label>
+                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
                 </div>
                 <div class="col-lg-4 col-md-6">
-                  <label for="date" class="form-label">Your Email adress</label>
-                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required="">
+                  <label for="email" class="form-label">Your Email address</label>
+                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
                 </div>
                 <div class="col-lg-4 col-md-6">
-                  <label for="date" class="form-label">Phone number</label>
-                  <input type="text" class="form-control" name="phone" id="phone" placeholder="Your Phone" required="">
+                  <label for="phone" class="form-label">Phone number</label>
+                  <input type="text" class="form-control" name="phone" id="phone" placeholder="Your Phone" required>
                 </div>
                 <div class="col-lg-4 col-md-6">
                   <label for="date" class="form-label">Delivery/Pickup Date</label>
-                  <input type="date" name="date" class="form-control" id="date" placeholder="Date" required="">
+                  <input type="date" name="date" class="form-control" id="date" placeholder="Date" required>
                 </div>
                 <div class="col-lg-4 col-md-6">
-                  <label for="date" class="form-label">Time</label>
-                  <input type="time" class="form-control" name="time" id="time" placeholder="Time" required="">
+                  <label for="time" class="form-label">Time</label>
+                  <input type="time" class="form-control" name="time" id="time" placeholder="Time" required>
                 </div>
                 <div class="col-lg-4 col-md-6">
-                  <label for="date" class="form-label">Cake Weight</label>
+                  <label for="cake_weight" class="form-label">Cake Weight</label>
                   <select class="form-control" name="cake_weight" id="cake_weight" required>
                     <option class="form-control" value="" disabled selected>Select cake weight (kg)</option>
                     <option value="1">1 kg</option>
@@ -727,7 +727,7 @@
                 </div>
 
                 <div class="col-lg-4 col-md-6">
-                  <label for="date" class="form-label">Cake Type</label>
+                  <label for="cake_type" class="form-label">Cake Type</label>
                   <select class="form-control" name="cake_type" id="cake_type" required>
                     <option value="" disabled selected>Select cake type</option>
                     <option value="birthday_cake">Birthday Cake</option>
@@ -744,9 +744,9 @@
                     <option value="scone">Scone</option>
                   </select>
                 </div>
-                
+
                 <div class="col-lg-4 col-md-6">
-                  <label for="date" class="form-label">Cake Flavor</label>
+                  <label for="cake_flavor" class="form-label">Cake Flavor</label>
                   <select class="form-control" name="cake_flavor" id="cake_flavor" required>
                     <option value="" disabled selected>Select cake flavor</option>
                     <option value="vanilla">Vanilla</option>
@@ -763,9 +763,9 @@
                     <option value="strawberry">Strawberry</option>
                   </select>
                 </div>
-                
+
                 <div class="col-lg-4 col-md-6">
-                  <label for="date" class="form-label">Filling Flavor</label>
+                  <label for="filling_flavor" class="form-label">Filling Flavor</label>
                   <select class="form-control" name="filling_flavor" id="filling_flavor" required>
                     <option value="" disabled selected>Select filling flavor</option>
                     <option value="vanilla_buttercream">Vanilla Buttercream</option>
@@ -782,12 +782,10 @@
                     <option value="oreo_cream">Oreo Cream</option>
                   </select>
                 </div>
-                
-                
               </div>
 
               <div class="form-group mt-3">
-                <label for="date" class="form-label">Your message</label>
+                <label for="message" class="form-label">Your message</label>
                 <textarea class="form-control" name="message" rows="5" placeholder="Here you can specify all the necessary details and special requests."></textarea>
               </div>
 
@@ -803,8 +801,7 @@
         </div>
 
       </div>
-
-    </section><!-- /Book A Table Section -->
+    </section><!-- End Book A Table Section -->
 
     <!-- Gallery Section -->
     <section id="gallery" class="gallery section light-background">
@@ -1041,8 +1038,6 @@
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
 
-  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-  
   <script>
     document.addEventListener("DOMContentLoaded", function() {
         const form = document.querySelector('#cakeOrderForm');
@@ -1051,29 +1046,10 @@
         orderButton.addEventListener('click', function(event) {
             event.preventDefault();
     
-            // Собираем значения полей формы
-            const formData = new FormData(form);
-            const data = {};
-            formData.forEach((value, key) => {
-                data[key] = value;
-            });
-    
-            // Добавляем тему письма
-            data.subject = 'Cake Order';
-    
-            // Отправка данных на FormSubmit.co
-            axios.post('https://formsubmit.co/bogbond@gmail.com', data)
-            .then(function(response) {
-                // Успешная отправка
-                console.log('Success:', response);
-                form.reset(); // Очистить форму после отправки
-                showSuccessMessage();
-            })
-            .catch(function(error) {
-                // Ошибка отправки
-                console.error('Error:', error);
-                showErrorMessage();
-            });
+            // Отправка формы через submit
+            form.action = 'https://formsubmit.co/bogbond@gmail.com';
+            form.method = 'POST';
+            form.submit();
         });
     
         // Показать сообщение об успешной отправке
@@ -1089,8 +1065,32 @@
             errorMessage.style.display = 'block';
             setTimeout(() => errorMessage.style.display = 'none', 5000); // скрыть через 5 секунд
         }
+    
+        // Привязка функций показа сообщений к событиям формы
+        form.addEventListener('submit', function(event) {
+            event.preventDefault();
+            const formData = new FormData(form);
+    
+            // Показываем загрузку
+            document.querySelector('.loading').style.display = 'block';
+    
+            axios.post('https://formsubmit.co/ajax/bogbond@gmail.com', formData)
+                .then(response => {
+                    console.log(response);
+                    showSuccessMessage();
+                    form.reset(); // сбросить форму после успешной отправки
+                })
+                .catch(error => {
+                    console.error(error);
+                    showErrorMessage();
+                })
+                .finally(() => {
+                    // Скрываем загрузку
+                    document.querySelector('.loading').style.display = 'none';
+                });
+        });
     });
-  </script>
+    </script>
   
     
   
