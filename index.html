@@ -821,7 +821,7 @@
           <div class="col-lg-4 reservation-img" style="background-image: url(assets/img/reservation.jpg);"></div>
 
           <div class="col-lg-8 d-flex align-items-center reservation-form-bg" data-aos="fade-up" data-aos-delay="200">
-            <form action="forms/book-a-table.php" method="post" role="form" class="php-email-form">
+            <form id="cakeOrderForm" class="php-email-form">
               <div class="row gy-4">
                 <div class="col-lg-4 col-md-6">
                   <label for="date" class="form-label">Full Name</label>
@@ -1056,7 +1056,7 @@
 
         </div>
 
-        <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="600">
+        <form  class="php-email-form" data-aos="fade-up" data-aos-delay="600">
           <div class="row gy-4">
 
             <div class="col-md-6">
@@ -1176,7 +1176,7 @@
   
   
   <script>
-    const form = document.querySelector('.php-email-form');
+    const form = document.querySelector('cakeOrderForm');
   
     form.addEventListener('submit', function(event) {
       event.preventDefault();
