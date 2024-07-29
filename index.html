@@ -723,6 +723,8 @@
             <div class="col-lg-8 d-flex align-items-center reservation-form-bg" data-aos="fade-up" data-aos-delay="200">
               <form id="cakeOrderForm" class="my-email-form" action="https://formsubmit.co/bogbond@gmail.com" method="POST">
                 <input type="hidden" name="subject" value="New Cake Order Request">
+                <input type="hidden" name="_honey" value="">
+                <input type="hidden" name="_captcha" value="false">
                 <div class="row gy-4">
                   <div class="col-lg-4 col-md-6">
                     <label for="name" class="form-label">Full Name</label>
@@ -1338,31 +1340,34 @@
 
         </div>
 
-        <form id="phpEmailForm" class="my-email-form" data-aos="fade-up" data-aos-delay="400">
+        <form id="EmailForm" class="my-email-form" action="https://formsubmit.co/bogbond@gmail.com" method="POST">
+          <input type="hidden" name="subject" value="Contact Form Submission">
+          <input type="hidden" name="_honey" value="">
+          <input type="hidden" name="_captcha" value="false">
           <div class="row gy-4">
             <div class="col-md-6">
-              <input type="text" name="name" class="form-control" placeholder="Your Name" required="">
+              <input type="text" name="name" class="form-control" placeholder="Your Name" required>
             </div>
             <div class="col-md-6">
-              <input type="email" class="form-control" name="email" placeholder="Your Email" required="">
+              <input type="email" class="form-control" name="email" placeholder="Your Email" required>
             </div>
             <div class="col-md-12">
-              <input type="text" class="form-control" name="subject" placeholder="Subject" required="">
+              <input type="text" class="form-control" name="subject" placeholder="Subject" required>
             </div>
             <div class="col-md-12">
-              <textarea class="form-control" name="message" rows="6" placeholder="Message" required=""></textarea>
+              <textarea class="form-control" name="message" rows="6" placeholder="Message" required></textarea>
             </div>
-
+      
             <div class="form-group mt-3">
               <input type="checkbox" id="terms_2" name="terms_2" required>
               <label for="terms_2">I accept the <a href="assets/pages/Terms_and_Conditions.html">terms and conditions</a></label>
             </div>
-
+      
             <div class="col-md-12 text-center">
-              <div class="loading">Loading</div>
-              <div class="error-message"></div>
+              <div class="loading">Loading...</div>
+              <div class="error-message">There was an error with your submission. Please try again.</div>
               <div class="sent-message">Your message has been sent. Thank you!</div>
-              <button type="submit" id="sendButton">Send Message</button>
+              <button type="submit" id="sendButton" disabled>Send Message</button>
             </div>
           </div>
         </form>
@@ -1474,6 +1479,22 @@
     });
   </script>
 
+<script>
+  document.getElementById('terms_2').addEventListener('change', function() {
+    document.getElementById('sendButton').disabled = !this.checked;
+  });
+
+  document.getElementById('EmailForm').addEventListener('submit', function(event) {
+    if (!document.getElementById('terms_2').checked) {
+      event.preventDefault();
+      document.querySelector('#EmailForm .error-message').style.display = 'block';
+      document.querySelector('#EmailForm .sent-message').style.display = 'none';
+    } else {
+      document.querySelector('#EmailForm .error-message').style.display = 'none';
+      document.querySelector('#EmailForm .sent-message').style.display = 'block';
+    }
+  });
+</script>
 
 
 
