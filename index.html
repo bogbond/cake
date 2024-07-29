@@ -722,104 +722,105 @@
 
             <div class="col-lg-8 d-flex align-items-center reservation-form-bg" data-aos="fade-up" data-aos-delay="200">
               <form id="cakeOrderForm" class="my-email-form" action="https://formsubmit.co/bogbond@gmail.com" method="POST">
-                  <div class="row gy-4">
-                      <div class="col-lg-4 col-md-6">
-                          <label for="name" class="form-label">Full Name</label>
-                          <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
-                      </div>
-                      <div class="col-lg-4 col-md-6">
-                          <label for="email" class="form-label">Your Email address</label>
-                          <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
-                      </div>
-                      <div class="col-lg-4 col-md-6">
-                          <label for="phone" class="form-label">Phone number</label>
-                          <input type="text" class="form-control" name="phone" id="phone" placeholder="Your Phone" required>
-                      </div>
-                      <div class="col-lg-4 col-md-6">
-                          <label for="date" class="form-label">Delivery/Pickup Date</label>
-                          <input type="date" name="date" class="form-control" id="date" placeholder="Date" required>
-                      </div>
-                      <div class="col-lg-4 col-md-6">
-                          <label for="time" class="form-label">Time</label>
-                          <input type="time" class="form-control" name="time" id="time" placeholder="Time" required>
-                      </div>
-                      <div class="col-lg-4 col-md-6">
-                          <label for="cake_weight" class="form-label">Cake Weight</label>
-                          <select class="form-control" name="cake_weight" id="cake_weight" required>
-                              <option class="form-control" value="" disabled selected>Select cake weight (kg)</option>
-                              <option value="1">1 kg</option>
-                              <option value="2">2 kg</option>
-                              <option value="3">3 kg</option>
-                              <option value="4">4 kg</option>
-                              <option value="5">5 kg</option>
-                              <option value="6">6 kg</option>
-                              <option value="7">7 kg</option>
-                              <option value="other">Other</option>
-                          </select>
-                      </div>
-      
-                      <div class="col-lg-4 col-md-6">
-                          <label for="cake_type" class="form-label">Cake Type</label>
-                          <select class="form-control" name="cake_type" id="cake_type" required>
-                              <option value="" disabled selected>Select cake type</option>
-                              <option value="birthday_cake">Birthday Cake</option>
-                              <option value="birthday_cupcakes">Birthday Cupcakes</option>
-                              <option value="wedding_cake">Wedding Cake</option>
-                              <option value="wedding_cupcakes">Wedding Cupcakes</option>
-                              <option value="christening_cake">Christening</option>
-                              <option value="special_occasion_cake">Special Occasion Cake</option>
-                              <option value="special_occasion_cupcakes">Special Occasion Cupcakes</option>
-                              <option value="other">Other</option>
-                          </select>
-                      </div>
-      
-                      <div class="col-lg-4 col-md-6">
-                          <label for="cake_flavor" class="form-label">Cake Flavor</label>
-                          <select class="form-control" name="cake_flavor" id="cake_flavor" required>
-                              <option value="" disabled selected>Select cake flavor</option>
-                              <option value="vanilla">Vanilla</option>
-                              <option value="chocolate">Chocolate</option>
-                              <option value="red_velvet">Red Velvet</option>
-                              <option value="lemon">Lemon</option>
-                              <option value="carrot">Carrot</option>
-                              <option value="other">Other</option>
-                          </select>
-                      </div>
-      
-                      <div class="col-lg-4 col-md-6">
-                          <label for="filling_flavor" class="form-label">Filling Flavor</label>
-                          <select class="form-control" name="filling_flavor" id="filling_flavor" required>
-                              <option value="" disabled selected>Select filling flavor</option>
-                              <option value="vanilla_buttercream">Vanilla Buttercream</option>
-                              <option value="chocolate_ganache">Chocolate Ganache</option>
-                              <option value="cream_cheese">Cream Cheese</option>
-                              <option value="lemon_curd">Lemon Curd</option>
-                              <option value="raspberry_jam">Raspberry Jam</option>
-                              <option value="strawberry_jam">Strawberry Jam</option>
-                              <option value="salted_caramel">Salted Caramel</option>
-                              <option value="other">Other</option>
-                          </select>
-                      </div>
+                <input type="hidden" name="subject" value="New Cake Order Request">
+                <div class="row gy-4">
+                  <div class="col-lg-4 col-md-6">
+                    <label for="name" class="form-label">Full Name</label>
+                    <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
                   </div>
-      
-                  <div class="form-group mt-3">
-                      <label for="message" class="form-label">Your message</label>
-                      <textarea class="form-control" name="message" rows="5" placeholder="Here you can specify all the necessary details and special requests."></textarea>
+                  <div class="col-lg-4 col-md-6">
+                    <label for="email" class="form-label">Your Email address</label>
+                    <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
                   </div>
-      
-                  <div class="form-group mt-3">
-                      <input type="checkbox" id="terms" name="terms" required>
-                      <label for="terms">I accept the <a href="assets/pages/Terms_and_Conditions.html">terms and conditions</a></label>
+                  <div class="col-lg-4 col-md-6">
+                    <label for="phone" class="form-label">Phone number</label>
+                    <input type="text" class="form-control" name="phone" id="phone" placeholder="Your Phone" required>
                   </div>
-      
-                  <div class="text-center mt-3">
-                      <div class="loading">Loading...</div>
-                      <div class="error-message">There was an error with your submission. Please try again.</div>
-                      <div class="sent-message">Your booking request was sent. We will call back or send an Email to confirm your reservation. Thank you!</div>
-                      <button type="submit" id="orderButton" disabled>Order</button>
+                  <div class="col-lg-4 col-md-6">
+                    <label for="date" class="form-label">Delivery/Pickup Date</label>
+                    <input type="date" name="date" class="form-control" id="date" placeholder="Date" required>
                   </div>
+                  <div class="col-lg-4 col-md-6">
+                    <label for="time" class="form-label">Time</label>
+                    <input type="time" class="form-control" name="time" id="time" placeholder="Time" required>
+                  </div>
+                  <div class="col-lg-4 col-md-6">
+                    <label for="cake_weight" class="form-label">Cake Weight</label>
+                    <select class="form-control" name="cake_weight" id="cake_weight" required>
+                      <option class="form-control" value="" disabled selected>Select cake weight (kg)</option>
+                      <option value="1">1 kg</option>
+                      <option value="2">2 kg</option>
+                      <option value="3">3 kg</option>
+                      <option value="4">4 kg</option>
+                      <option value="5">5 kg</option>
+                      <option value="6">6 kg</option>
+                      <option value="7">7 kg</option>
+                      <option value="other">Other</option>
+                    </select>
+                  </div>
+            
+                  <div class="col-lg-4 col-md-6">
+                    <label for="cake_type" class="form-label">Cake Type</label>
+                    <select class="form-control" name="cake_type" id="cake_type" required>
+                      <option value="" disabled selected>Select cake type</option>
+                      <option value="birthday_cake">Birthday Cake</option>
+                      <option value="birthday_cupcakes">Birthday Cupcakes</option>
+                      <option value="wedding_cake">Wedding Cake</option>
+                      <option value="wedding_cupcakes">Wedding Cupcakes</option>
+                      <option value="christening_cake">Christening</option>
+                      <option value="special_occasion_cake">Special Occasion Cake</option>
+                      <option value="special_occasion_cupcakes">Special Occasion Cupcakes</option>
+                      <option value="other">Other</option>
+                    </select>
+                  </div>
+            
+                  <div class="col-lg-4 col-md-6">
+                    <label for="cake_flavor" class="form-label">Cake Flavor</label>
+                    <select class="form-control" name="cake_flavor" id="cake_flavor" required>
+                      <option value="" disabled selected>Select cake flavor</option>
+                      <option value="vanilla">Vanilla</option>
+                      <option value="chocolate">Chocolate</option>
+                      <option value="red_velvet">Red Velvet</option>
+                      <option value="lemon">Lemon</option>
+                      <option value="carrot">Carrot</option>
+                      <option value="other">Other</option>
+                    </select>
+                  </div>
+            
+                  <div class="col-lg-4 col-md-6">
+                    <label for="filling_flavor" class="form-label">Filling Flavor</label>
+                    <select class="form-control" name="filling_flavor" id="filling_flavor" required>
+                      <option value="" disabled selected>Select filling flavor</option>
+                      <option value="vanilla_buttercream">Vanilla Buttercream</option>
+                      <option value="chocolate_ganache">Chocolate Ganache</option>
+                      <option value="cream_cheese">Cream Cheese</option>
+                      <option value="lemon_curd">Lemon Curd</option>
+                      <option value="raspberry_jam">Raspberry Jam</option>
+                      <option value="strawberry_jam">Strawberry Jam</option>
+                      <option value="salted_caramel">Salted Caramel</option>
+                      <option value="other">Other</option>
+                    </select>
+                  </div>
+                </div>
+            
+                <div class="form-group mt-3">
+                  <label for="message" class="form-label">Your message</label>
+                  <textarea class="form-control" name="message" rows="5" placeholder="Here you can specify all the necessary details and special requests."></textarea>
+                </div>
+            
+                <div class="form-group mt-3">
+                  <input type="checkbox" id="terms" name="terms" required>
+                  <label for="terms">I accept the <a href="assets/pages/Terms_and_Conditions.html">terms and conditions</a></label>
+                </div>
+            
+                <div class="text-center mt-3">
+                  <div class="loading">Loading...</div>
+                  <div class="error-message">There was an error with your submission. Please try again.</div>
+                  <div class="sent-message">Your booking request was sent. We will call back or send an Email to confirm your reservation. Thank you!</div>
+                  <button type="submit" id="orderButton" disabled>Order</button>
+                </div>
               </form>
-          </div><!-- End Reservation Form -->
+            </div><!-- End Reservation Form -->
           
           
           
@@ -1457,49 +1458,21 @@
   <script src="assets/js/main.js"></script>
 
   <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        const form = document.getElementById('cakeOrderForm');
-        const orderButton = document.getElementById('orderButton');
-        const termsCheckbox = document.getElementById('terms');
-        const loadingMessage = document.querySelector('.loading');
-        const errorMessage = document.querySelector('.error-message');
-        const sentMessage = document.querySelector('.sent-message');
-    
-        termsCheckbox.addEventListener('change', function() {
-            orderButton.disabled = !termsCheckbox.checked;
-        });
-    
-        form.addEventListener('submit', function(event) {
-            event.preventDefault();
-    
-            const formData = new FormData(form);
-    
-            loadingMessage.style.display = 'block';
-            errorMessage.style.display = 'none';
-            sentMessage.style.display = 'none';
-    
-            fetch(form.action, {
-                method: 'POST',
-                body: formData,
-                headers: {
-                    'Accept': 'application/json'
-                }
-            }).then(response => {
-                loadingMessage.style.display = 'none';
-                if (response.ok) {
-                    sentMessage.style.display = 'block';
-                    form.reset();
-                    orderButton.disabled = true;
-                } else {
-                    errorMessage.style.display = 'block';
-                }
-            }).catch(error => {
-                loadingMessage.style.display = 'none';
-                errorMessage.style.display = 'block';
-            });
-        });
+    document.getElementById('terms').addEventListener('change', function() {
+      document.getElementById('orderButton').disabled = !this.checked;
     });
-    </script>
+  
+    document.getElementById('cakeOrderForm').addEventListener('submit', function(event) {
+      if (!document.getElementById('terms').checked) {
+        event.preventDefault();
+        document.querySelector('.error-message').style.display = 'block';
+        document.querySelector('.sent-message').style.display = 'none';
+      } else {
+        document.querySelector('.error-message').style.display = 'none';
+        document.querySelector('.sent-message').style.display = 'block';
+      }
+    });
+  </script>
 
 
 
@@ -1558,7 +1531,7 @@
         });
     });
   </script> -->
-  <script>
+  <!-- <script>
     document.addEventListener("DOMContentLoaded", function() {
         const form = document.querySelector('#phpEmailForm');
         const sendButton = document.querySelector('#sendButton');
@@ -1622,7 +1595,7 @@
                 });
         });
     });
-</script>
+</script> -->
 
 
     
