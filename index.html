@@ -246,12 +246,12 @@
                     <img src="assets/img/menu/bc_menu/bc5.png" class="menu-img img-fluid" alt="Chocolate Floral Elegance Cake">
                   </picture>
                 </a>
-                <h4>Chocolate Floral Elegance Cake</h4>
+                <h4>Рigh Times Cake</h4>
                 <!-- <p class="ingredients">
                   Lorem, deren, trataro, filede, nerada
                 </p> -->
                 <p class="price">
-                  From £90
+                  From £70
                 </p>
               </div><!-- Menu Item -->
               
@@ -263,12 +263,12 @@
                     <img src="assets/img/menu/bc_menu/bc6.png" class="menu-img img-fluid" alt="Birth 50 Cake">
                   </picture>
                 </a>
-                <h4>Birth 50 Cake</h4>
+                <h4>Chocolate Floral Elegance</h4>
                 <!-- <p class="ingredients">
                   Lorem, deren, trataro, filede, nerada
                 </p> -->
                 <p class="price">
-                  £69.95
+                  £90
                 </p>
               </div><!-- Menu Item -->
               
@@ -1461,45 +1461,38 @@
             orderButton.disabled = !this.checked;
         });
     });
-    </script>
     
-  <script>
+    
     document.getElementById('cakeOrderForm').addEventListener('submit', function(event) {
-        event.preventDefault(); // Предотвратить стандартное отправление формы
-        const form = this;
-        const formData = new FormData(form);
-    
-        fetch(form.action, {
-            method: 'POST', // Явно указываем метод POST
-            body: formData,
-            headers: {
-                'Accept': 'application/json'
-            }
-        }).then(response => {
-            if (response.ok) {
-                document.querySelector('.sent-message').style.display = 'block';
-                form.reset();
-            } else {
-                return response.json().then(data => {
-                    if (data.errors) {
-                        document.querySelector('.error-message').innerHTML = data.errors.map(error => error.message).join(', ');
-                    } else {
-                        document.querySelector('.error-message').innerHTML = 'Oops! There was a problem submitting your form.';
-                    }
-                    document.querySelector('.error-message').style.display = 'block';
-                });
-            }
-        }).catch(error => {
-            document.querySelector('.error-message').innerHTML = 'Oops! There was a problem submitting your form.';
-            document.querySelector('.error-message').style.display = 'block';
-        }).finally(() => {
-            document.querySelector('.loading').style.display = 'none';
-        });
-    
-        document.querySelector('.loading').style.display = 'block';
-    });
-    </script>
-    
+      event.preventDefault();
+      const form = this;
+      const formData = new FormData(form);
+  
+      fetch(form.action, {
+          method: 'POST',
+          body: formData,
+          mode: 'no-cors',
+          headers: {
+              'Accept': 'application/json'
+          }
+      }).then(response => {
+          if (response.ok) {
+              document.querySelector('.sent-message').style.display = 'block';
+              form.reset();
+          } else {
+              document.querySelector('.error-message').innerHTML = 'Oops! There was a problem submitting your form.';
+              document.querySelector('.error-message').style.display = 'block';
+          }
+      }).catch(error => {
+          document.querySelector('.error-message').innerHTML = 'Oops! There was a problem submitting your form.';
+          document.querySelector('.error-message').style.display = 'block';
+      }).finally(() => {
+          document.querySelector('.loading').style.display = 'none';
+      });
+  
+      document.querySelector('.loading').style.display = 'block';
+  });
+  
 
 
 </script>
