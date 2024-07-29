@@ -1260,14 +1260,14 @@
             }
           </script>
           <div class="swiper-wrapper align-items-center">
-            <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="assets/img/gallery/photo(1).jpg"><img src="assets/img/gallery/photo(1).jpg" class="img-fluid" alt=""></a></div>
-            <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="assets/img/gallery/photo(2).jpg"><img src="assets/img/gallery/photo(2).jpg" class="img-fluid" alt=""></a></div>
-            <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="assets/img/gallery/photo(3).jpg"><img src="assets/img/gallery/photo(3).jpg" class="img-fluid" alt=""></a></div>
-            <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="assets/img/gallery/photo(4).jpg"><img src="assets/img/gallery/photo(4).jpg" class="img-fluid" alt=""></a></div>
-            <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="assets/img/gallery/photo(5).jpg"><img src="assets/img/gallery/photo(5).jpg" class="img-fluid" alt=""></a></div>
-            <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="assets/img/gallery/photo(6).jpg"><img src="assets/img/gallery/photo(6).jpg" class="img-fluid" alt=""></a></div>
-            <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="assets/img/gallery/photo(7).jpg"><img src="assets/img/gallery/photo(7).jpg" class="img-fluid" alt=""></a></div>
-            <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="assets/img/gallery/photo(8).jpg"><img src="assets/img/gallery/photo(8).jpg" class="img-fluid" alt=""></a></div>
+            <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="assets/img/gallery/photo(1).jpg"><img src="assets/img/gallery/photo(1)_s.jpg" class="img-fluid" alt=""></a></div>
+            <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="assets/img/gallery/photo(2).jpg"><img src="assets/img/gallery/photo(2)_s.jpg" class="img-fluid" alt=""></a></div>
+            <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="assets/img/gallery/photo(3).jpg"><img src="assets/img/gallery/photo(3)_s.jpg" class="img-fluid" alt=""></a></div>
+            <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="assets/img/gallery/photo(4).jpg"><img src="assets/img/gallery/photo(4)_s.jpg" class="img-fluid" alt=""></a></div>
+            <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="assets/img/gallery/photo(5).jpg"><img src="assets/img/gallery/photo(5)_s.jpg" class="img-fluid" alt=""></a></div>
+            <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="assets/img/gallery/photo(6).jpg"><img src="assets/img/gallery/photo(6)_s.jpg" class="img-fluid" alt=""></a></div>
+            <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="assets/img/gallery/photo(7).jpg"><img src="assets/img/gallery/photo(7)_s.jpg" class="img-fluid" alt=""></a></div>
+            <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="assets/img/gallery/photo(8).jpg"><img src="assets/img/gallery/photo(8)_s.jpg" class="img-fluid" alt=""></a></div>
           </div>
           <div class="swiper-pagination"></div>
         </div>
@@ -1469,6 +1469,12 @@
                 return;
             }
     
+            // Проверка на валидацию полей формы
+            if (!form.checkValidity()) {
+                form.reportValidity();
+                return;
+            }
+
             // Отправка формы через submit
             form.action = 'https://formsubmit.co/itsacheekycake@gmail.com';
             form.method = 'POST';
@@ -1514,6 +1520,7 @@
         });
     });
 </script>
+
 
     <!-- <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script> -->
   <!-- <script>
