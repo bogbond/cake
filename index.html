@@ -5,8 +5,28 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <title>Celebration cakes | It’s a Cheeky Cake | Worcester</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
+
+   <!-- Meta Description -->
+   <meta name="description" content="Discover It's a Cheeky Cake in Worcester, your go-to bakery for bespoke cakes, cupcakes, and desserts. Handcrafted with love, our custom-made treats are perfect for weddings, birthdays, and special occasions. Contact us today for personalized creations that delight.">
+
+   <!-- Meta Keywords -->
+   <meta name="keywords" content="Custom-made cakes Worcester, Handcrafted desserts, Personalized cupcakes, Unique celebration cakes, High-quality ingredients cakes, Certified baker cakes, Worcester bakery delivery, Special occasion cakes Worcester, Worcester cakes, bespoke cakes, custom cakes, wedding cakes, birthday cakes, desserts, cupcakes, handmade cakes, cakes West Midlands, cakes Birmingham, cakes Worcestershire">
+
+   <!-- Open Graph Meta Tags for Social Media -->
+   <meta property="og:title" content="It's a Cheeky Cake - Bespoke Cakes and Desserts in Worcester">
+   <meta property="og:description" content="Welcome to It's a Cheeky Cake, your friendly neighbourhood baker in Worcester! Indulge in handcrafted cakes, cupcakes, and desserts made with love and creativity. Perfect for any occasion.">
+   <meta property="og:image" content="https://www.itsacheekycake.co.uk/assets/img/about.jpg">
+   <meta property="og:url" content="https://www.itsacheekycake.co.uk">
+   <meta property="og:type" content="website">
+
+   <!-- Twitter Card Meta Tags -->
+   <meta name="twitter:card" content="summary_large_image">
+   <meta name="twitter:title" content="It's a Cheeky Cake - Bespoke Cakes and Desserts in Worcester">
+   <meta name="twitter:description" content="Welcome to It's a Cheeky Cake, your friendly neighbourhood baker in Worcester! Indulge in handcrafted cakes, cupcakes, and desserts made with love and creativity. Perfect for any occasion.">
+   <meta name="twitter:image" content="https://www.itsacheekycake.co.uk/assets/img/about.jpg">
+   <meta name="twitter:url" content="https://www.itsacheekycake.co.uk">
+  <!-- <meta content="" name="description">
+  <meta content="" name="keywords"> -->
 
   <!-- Favicons -->
   <link href="assets/img/cake_icon.png" rel="icon">
@@ -34,8 +54,8 @@
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
 
-   <!-- Подключаем библиотеку Axios для работы с HTTP запросами -->
-   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <!-- Подключаем библиотеку Axios для работы с HTTP запросами -->
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 
 </head>
 
@@ -791,6 +811,11 @@
                 <label for="message" class="form-label">Your message</label>
                 <textarea class="form-control" name="message" rows="5" placeholder="Here you can specify all the necessary details and special requests."></textarea>
               </div>
+              
+              <div class="form-group mt-3">
+                <input type="checkbox" id="terms" name="terms" required>
+                <label for="terms">I accept the <a href="assets/pages/Terms_and_Conditions.html">terms and conditions</a></label>
+              </div>
 
               <div class="text-center mt-3">
                 <div class="loading">Loading</div>
@@ -1260,7 +1285,7 @@
         <p><span></span> <span class="description-title">Contact Me</span></p>
       </div><!-- End Section Title -->
 
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
+      <div class="container" data-aos="fade-up" data-aos-delay="50">
 
         <div class="mb-5">
           <!-- <iframe style="width: 100%; height: 400px;" src="https://www.google.com/maps/place/It%E2%80%99s+A+Cheeky+Cake/@52.2136878,-2.1965019,17z/data=!4m6!3m5!1s0x4870f120c9c08787:0xf5765934668f24a9!8m2!3d52.2137567!4d-2.1957729!16s%2Fg%2F11vf9mlh0f?entry=ttu" frameborder="0" allowfullscreen=""></iframe> -->
@@ -1270,7 +1295,7 @@
         <div id="contact_form" class="row gy-4">
 
           <div class="col-md-6">
-            <div class="info-item d-flex align-items-center" data-aos="fade-up" data-aos-delay="200">
+            <div class="info-item d-flex align-items-center" data-aos="fade-up" data-aos-delay="100">
               <i class="icon bi bi-geo-alt flex-shrink-0"></i>
               <div>
                 <h3>Address</h3>
@@ -1280,7 +1305,7 @@
           </div><!-- End Info Item -->
 
           <div class="col-md-6">
-            <div class="info-item d-flex align-items-center" data-aos="fade-up" data-aos-delay="300">
+            <div class="info-item d-flex align-items-center" data-aos="fade-up" data-aos-delay="150">
               <i class="icon bi bi-telephone flex-shrink-0"></i>
               <div>
                 <h3>Call</h3>
@@ -1290,17 +1315,17 @@
           </div><!-- End Info Item -->
 
           <div class="col-md-6">
-            <div class="info-item d-flex align-items-center" data-aos="fade-up" data-aos-delay="400">
+            <div class="info-item d-flex align-items-center" data-aos="fade-up" data-aos-delay="200">
               <i class="icon bi bi-envelope flex-shrink-0"></i>
               <div>
                 <h3>Email</h3>
-                <p>itsacheekycake@gmail.com</p>
+                <a href="mailto:itsacheekycake@gmail.com"><p>itsacheekycake@gmail.com</p></a>
               </div>
             </div>
           </div><!-- End Info Item -->
 
           <div class="col-md-6">
-            <div class="info-item d-flex align-items-center" data-aos="fade-up" data-aos-delay="500">
+            <div class="info-item d-flex align-items-center" data-aos="fade-up" data-aos-delay="250">
               <i class="icon bi bi-clock flex-shrink-0"></i>
               <div>
                 <h3>Opening Hours<br></h3>
@@ -1311,7 +1336,7 @@
 
         </div>
 
-        <form id="phpEmailForm" class="php-email-form" data-aos="fade-up" data-aos-delay="600">
+        <form id="phpEmailForm" class="php-email-form" data-aos="fade-up" data-aos-delay="400">
           <div class="row gy-4">
             <div class="col-md-6">
               <input type="text" name="name" class="form-control" placeholder="Your Name" required="">
@@ -1325,6 +1350,12 @@
             <div class="col-md-12">
               <textarea class="form-control" name="message" rows="6" placeholder="Message" required=""></textarea>
             </div>
+
+            <div class="form-group mt-3">
+              <input type="checkbox" id="terms_2" name="terms_2" required>
+              <label for="terms_2">I accept the <a href="assets/pages/Terms_and_Conditions.html">terms and conditions</a></label>
+            </div>
+
             <div class="col-md-12 text-center">
               <div class="loading">Loading</div>
               <div class="error-message"></div>
@@ -1363,7 +1394,8 @@
             <h4>Contact</h4>
             <p>
               <strong>Phone:</strong> <span>07340 999518</span><br>
-              <strong>Email:</strong> <span>itsacheekycake@gmail.com</span><br>
+              <strong>Email:</strong> <span><a href="mailto:itsacheekycake@gmail.com">itsacheekycake@gmail.com</a>
+              </span><br>
             </p>
           </div>
         </div>
@@ -1379,6 +1411,7 @@
           </div>
         </div>
 
+
         <div class="col-lg-3 col-md-6">
           <h4>Follow Me</h4>
           <div class="social-links d-flex">
@@ -1390,16 +1423,16 @@
         </div>
         
       </div>
+
     </div>
 
     <div class="container copyright text-center mt-4">
+      <a href="assets\pages\Terms_and_Conditions.html"><p>Terms & Conditions</p></a>
+      <a href="assets\pages\Privacy_Policy.html"><p>Privacy Policy</p></a>
+      <br>
       <p>© <span>Copyright</span> <strong class="px-1 sitename">CheekyCake</strong> <span>All Rights Reserved</span></p>
       <div class="credits">
-        <!-- All the links in the footer should remain intact. -->
-        <!-- You can delete the links only if you've purchased the pro version. -->
-        <!-- Licensing information: https://bootstrapmade.com/license/ -->
-        <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
-        Designed by <a href="bogbond@gmail.com">Bond</a>
+        Designed by <a href="mailto:bogbond@gmail.com">Bond</a>
       </div>
     </div>
 
@@ -1429,6 +1462,12 @@
     
         orderButton.addEventListener('click', function(event) {
             event.preventDefault();
+
+            // Проверка, отмечен ли чекбокс с id 'terms'
+            if (!document.getElementById('terms').checked) {
+                alert('You must accept the terms and conditions before submitting.');
+                return;
+            }
     
             // Отправка формы через submit
             form.action = 'https://formsubmit.co/itsacheekycake@gmail.com';
@@ -1474,10 +1513,10 @@
                 });
         });
     });
-  </script>
+</script>
 
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script> -->
+  <!-- <script>
     document.addEventListener("DOMContentLoaded", function() {
         const form = document.querySelector('#phpEmailForm');
         const sendButton = document.querySelector('#sendButton');
@@ -1529,7 +1568,73 @@
                 });
         });
     });
-    </script>
+  </script> -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const form = document.querySelector('#phpEmailForm');
+        const sendButton = document.querySelector('#sendButton');
+
+        sendButton.addEventListener('click', function(event) {
+            event.preventDefault();
+
+            // Проверка, отмечен ли чекбокс с id 'terms_2'
+            if (!document.getElementById('terms_2').checked) {
+                alert('You must accept the terms and conditions before submitting.');
+                return;
+            }
+
+            // Проверка на валидацию полей формы
+            if (!form.checkValidity()) {
+                form.reportValidity();
+                return;
+            }
+
+            // Отправка формы через submit
+            form.action = 'https://formsubmit.co/itsacheekycake@gmail.com';
+            form.method = 'POST';
+            form.submit();
+        });
+
+        // Показать сообщение об успешной отправке
+        function showSuccessMessage() {
+            const successMessage = document.querySelector('.sent-message');
+            successMessage.style.display = 'block';
+            setTimeout(() => successMessage.style.display = 'none', 5000); // скрыть через 5 секунд
+        }
+
+        // Показать сообщение об ошибке
+        function showErrorMessage() {
+            const errorMessage = document.querySelector('.error-message');
+            errorMessage.style.display = 'block';
+            setTimeout(() => errorMessage.style.display = 'none', 5000); // скрыть через 5 секунд
+        }
+
+        // Привязка функций показа сообщений к событиям формы
+        form.addEventListener('submit', function(event) {
+            event.preventDefault();
+            const formData = new FormData(form);
+
+            // Показываем загрузку
+            document.querySelector('.loading').style.display = 'block';
+
+            axios.post('https://formsubmit.co/ajax/itsacheekycake@gmail.com', formData)
+                .then(response => {
+                    console.log(response);
+                    showSuccessMessage();
+                    form.reset(); // сбросить форму после успешной отправки
+                })
+                .catch(error => {
+                    console.error(error);
+                    showErrorMessage();
+                })
+                .finally(() => {
+                    // Скрываем загрузку
+                    document.querySelector('.loading').style.display = 'none';
+                });
+        });
+    });
+</script>
+
 
     
   
