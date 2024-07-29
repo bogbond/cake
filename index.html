@@ -54,6 +54,8 @@
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
 
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
   <!-- Подключаем библиотеку Axios для работы с HTTP запросами -->
   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 
@@ -665,7 +667,7 @@
                   <h4>
                     Indulge in handcrafted delights
                   </h4>
-                  <br><br)
+                  <br><br>
                   <p>At It's a Cheeky Cake, I pour my heart and soul into every confection I create. From stunning celebration cakes to mouth-watering cupcakes and a variety of irresistible desserts, my passion for baking shines through in every bite. Each creation is meticulously crafted, ensuring that you receive a truly unique and delicious masterpiece.
                     <br><br>So, why not treat yourself to a bespoke, made-to-order cake that will make your taste buds dance and create sweet memories that will be cherished for a lifetime. Contact me today and let's start baking magic together!</p>
     
@@ -712,11 +714,14 @@
             </div>
 
             <div class="col-lg-8 d-flex align-items-center reservation-form-bg" data-aos="fade-up" data-aos-delay="200">
-              <form id="cakeOrderForm" class="php-email-form" action="https://formsubmit.co/itsacheekycake@gmail.com" method="POST">
-                  <!-- Hidden fields to disable spam checks -->
-                  <input type="hidden" name="_honey" value="">
+              <form id="cakeOrderForm" class="php-email-form my-form" method="POST" action="https://formsubmit.co/bogbond@gmail.com">
+                  <input type="hidden" name="_subject" value="New Cake Order Request">
                   <input type="hidden" name="_captcha" value="false">
+                  <input type="hidden" name="_template" value="table">
+                  <input type="hidden" name="_next" value="http://127.0.0.1:5500/index.html">
+                  
                   <div class="row gy-4">
+                      <!-- Ваша текущая форма -->
                       <div class="col-lg-4 col-md-6">
                           <label for="name" class="form-label">Full Name</label>
                           <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
@@ -751,7 +756,6 @@
                               <option value="other">Other</option>
                           </select>
                       </div>
-          
                       <div class="col-lg-4 col-md-6">
                           <label for="cake_type" class="form-label">Cake Type</label>
                           <select class="form-control" name="cake_type" id="cake_type" required>
@@ -766,7 +770,6 @@
                               <option value="other">Other</option>
                           </select>
                       </div>
-          
                       <div class="col-lg-4 col-md-6">
                           <label for="cake_flavor" class="form-label">Cake Flavor</label>
                           <select class="form-control" name="cake_flavor" id="cake_flavor" required>
@@ -779,7 +782,6 @@
                               <option value="other">Other</option>
                           </select>
                       </div>
-          
                       <div class="col-lg-4 col-md-6">
                           <label for="filling_flavor" class="form-label">Filling Flavor</label>
                           <select class="form-control" name="filling_flavor" id="filling_flavor" required>
@@ -807,15 +809,19 @@
                   </div>
           
                   <div class="text-center mt-3">
-                      <div class="loading">Loading</div>
-                      <div class="error-message"></div>
-                      <div class="sent-message">Your booking request was sent. We will call back or send an Email to confirm your reservation. Thank you!</div>
+                      <div class="loading" style="display:none;">Loading</div>
+                      <div class="error-message" style="display:none; color:red;"></div>
+                      <div class="sent-message" style="display:none; color:green;">Your booking request was sent. We will call back or send an Email to confirm your reservation. Thank you!</div>
                       <button type="submit" id="orderButton" disabled>Order</button>
                   </div>
               </form>
           </div><!-- End Reservation Form -->
           
-
+          
+          
+          
+          
+          
 
         </div>
 
@@ -1446,61 +1452,53 @@
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
 
+
   <script>
-    document.addEventListener('DOMContentLoaded', function() {
-    const form = document.getElementById('cakeOrderForm');
-    const submitButton = document.getElementById('orderButton');
-    const termsCheckbox = document.getElementById('terms');
-
-    // Enable/Disable submit button based on terms checkbox
-    termsCheckbox.addEventListener('change', function() {
-        submitButton.disabled = !termsCheckbox.checked;
-    });
-
-    // Form submission handler
-    form.addEventListener('submit', function(event) {
-        event.preventDefault(); // Prevent default form submission
-
-        if (!termsCheckbox.checked) {
-            alert('You must accept the terms and conditions before submitting the form.');
-            return;
-        }
-
-        // Prepare the form data for submission
-        const formData = new FormData(form);
-
-        // Create an object to hold the form data
-        const formObject = {};
-        formData.forEach((value, key) => {
-            formObject[key] = value;
-        });
-
-        // Send the form data to formsubmit.co
-        fetch('https://formsubmit.co/ajax/itsacheekycake@gmail.com', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-                'Accept': 'application/json'
-            },
-            body: JSON.stringify(formObject)
-        })
-        .then(response => response.json())
-        .then(data => {
-            if (data.success) {
-                document.querySelector('.sent-message').style.display = 'block';
-                form.reset();
-                submitButton.disabled = true; // Disable the button again after submission
-            } else {
-                document.querySelector('.error-message').innerText = 'There was an error submitting the form. Please try again.';
-                document.querySelector('.error-message').style.display = 'block';
-            }
-        })
-        .catch(error => {
-            document.querySelector('.error-message').innerText = 'There was an error submitting the form. Please try again.';
-            document.querySelector('.error-message').style.display = 'block';
+    $(document).ready(function() {
+        $('#terms').on('change', function() {
+            $('#orderButton').prop('disabled', !this.checked);
         });
     });
-});
+    </script>
+    
+    <script>
+      document.getElementById('cakeOrderForm').addEventListener('submit', function(event) {
+          event.preventDefault();
+          const form = this;
+          const formData = new FormData(form);
+      
+          fetch(form.action, {
+              method: form.method,
+              body: formData,
+              headers: {
+                  'Accept': 'application/json'
+              }
+          }).then(response => {
+              if (response.ok) {
+                  document.querySelector('.sent-message').style.display = 'block';
+                  form.reset();
+              } else {
+                  return response.json().then(data => {
+                      if (Object.hasOwn(data, 'errors')) {
+                          document.querySelector('.error-message').innerHTML = data["errors"].map(error => error["message"]).join(", ");
+                      } else {
+                          document.querySelector('.error-message').innerHTML = "Oops! There was a problem submitting your form";
+                      }
+                      document.querySelector('.error-message').style.display = 'block';
+                  });
+              }
+          }).catch(error => {
+              document.querySelector('.error-message').innerHTML = "Oops! There was a problem submitting your form";
+              document.querySelector('.error-message').style.display = 'block';
+          }).finally(() => {
+              document.querySelector('.loading').style.display = 'none';
+          });
+      
+          document.querySelector('.loading').style.display = 'block';
+      });
+      </script>
+      
+
 
 </script>
 
