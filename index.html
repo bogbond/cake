@@ -253,7 +253,7 @@
                     <img src="assets/img/menu/bc_menu/bc5.png" class="menu-img img-fluid" alt="Chocolate Floral Elegance Cake">
                   </picture>
                 </a>
-                <h4>Рigh Times Cake</h4>
+                <h4>High Times Cake</h4>
                 <!-- <p class="ingredients">
                   Lorem, deren, trataro, filede, nerada
                 </p> -->
@@ -721,7 +721,7 @@
             </div>
 
             <div class="col-lg-8 d-flex align-items-center reservation-form-bg" data-aos="fade-up" data-aos-delay="200">
-              <form id="cakeOrderForm" class="my-email-form" action="https://formsubmit.co/itsacheekycake@gmail.com" method="POST">
+              <form id="cakeOrderForm" class="my-email-form" action="https://formsubmit.co/da84a97935c8d2f30ef1e5b93d9a9234" method="POST">
                 <input type="hidden" name="subject" value="New Cake Order Request">
                 <input type="hidden" name="_honey" value="">
                 <input type="hidden" name="_captcha" value="false">
@@ -845,9 +845,9 @@
     
               <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
                 <div class="why-box">
-                  <h3>Why Choose Cheeky Cake</h3>
+                  <h3>Why Choose It`s a Cheeky Cake</h3>
                   <p>
-                    At Cheeky Cake, I believe that every celebration deserves a touch of sweetness and artistry. My creations are not just desserts; they are edible works of art crafted with love and meticulous attention to detail. Let me make your special moments unforgettable with my exquisite cakes and cupcakes.
+                    At It`s a Cheeky Cake, I believe that every celebration deserves a touch of sweetness and artistry. My creations are not just desserts; they are edible works of art crafted with love and meticulous attention to detail. Let me make your special moments unforgettable with my exquisite cakes and cupcakes.
                   <div class="text-center">
                     <a href="#" class="more-btn"><span>Learn More</span> <i class="bi bi-chevron-right"></i></a>
                   </div>
@@ -1340,7 +1340,7 @@
 
         </div>
 
-        <form id="EmailForm" class="my-email-form" action="https://formsubmit.co/itsacheekycake@gmail.com" method="POST">
+        <form id="EmailForm" class="my-email-form" action="https://formsubmit.co/da84a97935c8d2f30ef1e5b93d9a9234" method="POST">
           <input type="hidden" name="subject" value="Contact Form Submission">
           <input type="hidden" name="_honey" value="">
           <input type="hidden" name="_captcha" value="false">
@@ -1464,7 +1464,7 @@
 
 
 
-  <script>
+  <!-- <script>
     // Общая функция для обработки отправки формы
     function handleFormSubmission(formId, termsId, buttonId, errorMessageSelector, sentMessageSelector) {
       const form = document.getElementById(formId);
@@ -1494,192 +1494,49 @@
     // Инициализация обработки форм
     handleFormSubmission('cakeOrderForm', 'terms', 'orderButton', '.error-message', '.sent-message');
     handleFormSubmission('EmailForm', 'terms_2', 'sendButton', '.error-message', '.sent-message');
-  </script>
-  
-  
-  
-  <!-- <script>
-    document.getElementById('terms').addEventListener('change', function() {
-      document.getElementById('orderButton').disabled = !this.checked;
-    });
-  
-    document.getElementById('orderButton').addEventListener('click', function(event) {
-      if (!document.getElementById('terms').checked) {
-        event.preventDefault();
-        alert("Please accept the terms and conditions to proceed.");
-      }
-    });
-  
-    document.getElementById('cakeOrderForm').addEventListener('submit', function(event) {
-      event.preventDefault();
-      if (document.getElementById('terms').checked) {
-        document.querySelector('.error-message').style.display = 'none';
-        document.querySelector('.sent-message').style.display = 'block';
-        
-        setTimeout(() => {
-          event.target.submit();
-          event.target.reset();
-        }, 3000); // Adjust the delay as needed
-      } else {
-        document.querySelector('.error-message').style.display = 'block';
-        document.querySelector('.sent-message').style.display = 'none';
-      }
-    });
-  </script>
-
-<script>
-  document.getElementById('terms_2').addEventListener('change', function() {
-    document.getElementById('sendButton').disabled = !this.checked;
-  });
-
-  document.getElementById('sendButton').addEventListener('click', function(event) {
-    if (!document.getElementById('terms_2').checked) {
-      event.preventDefault();
-      alert("Please accept the terms and conditions to proceed.");
-    }
-  });
-
-  document.getElementById('EmailForm').addEventListener('submit', function(event) {
-    event.preventDefault();
-    if (document.getElementById('terms_2').checked) {
-      document.querySelector('#EmailForm .error-message').style.display = 'none';
-      document.querySelector('#EmailForm .sent-message').style.display = 'block';
-      
-      setTimeout(() => {
-        event.target.submit();
-        event.target.reset();
-      }, 3000); // Adjust the delay as needed
-    } else {
-      document.querySelector('#EmailForm .error-message').style.display = 'block';
-      document.querySelector('#EmailForm .sent-message').style.display = 'none';
-    }
-  });
-</script> -->
-
-
-
-    <!-- <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script> -->
-  <!-- <script>
-    document.addEventListener("DOMContentLoaded", function() {
-        const form = document.querySelector('#phpEmailForm');
-        const sendButton = document.querySelector('#sendButton');
-
-        sendButton.addEventListener('click', function(event) {
-            event.preventDefault();
-
-            // Отправка формы через submit
-            form.action = 'https://formsubmit.co/itsacheekycake@gmail.com';
-            form.method = 'POST';
-            form.submit();
-        });
-
-        // Показать сообщение об успешной отправке
-        function showSuccessMessage() {
-            const successMessage = document.querySelector('.sent-message');
-            successMessage.style.display = 'block';
-            setTimeout(() => successMessage.style.display = 'none', 5000); // скрыть через 5 секунд
-        }
-
-        // Показать сообщение об ошибке
-        function showErrorMessage() {
-            const errorMessage = document.querySelector('.error-message');
-            errorMessage.style.display = 'block';
-            setTimeout(() => errorMessage.style.display = 'none', 5000); // скрыть через 5 секунд
-        }
-
-        // Привязка функций показа сообщений к событиям формы
-        form.addEventListener('submit', function(event) {
-            event.preventDefault();
-            const formData = new FormData(form);
-
-            // Показываем загрузку
-            document.querySelector('.loading').style.display = 'block';
-
-            axios.post('https://formsubmit.co/ajax/itsacheekycake@gmail.com', formData)
-                .then(response => {
-                    console.log(response);
-                    showSuccessMessage();
-                    form.reset(); // сбросить форму после успешной отправки
-                })
-                .catch(error => {
-                    console.error(error);
-                    showErrorMessage();
-                })
-                .finally(() => {
-                    // Скрываем загрузку
-                    document.querySelector('.loading').style.display = 'none';
-                });
-        });
-    });
   </script> -->
-  <!-- <script>
-    document.addEventListener("DOMContentLoaded", function() {
-        const form = document.querySelector('#phpEmailForm');
-        const sendButton = document.querySelector('#sendButton');
-
-        sendButton.addEventListener('click', function(event) {
-            event.preventDefault();
-
-            // Проверка, отмечен ли чекбокс с id 'terms_2'
-            if (!document.getElementById('terms_2').checked) {
-                alert('You must accept the terms and conditions before submitting.');
-                return;
-            }
-
-            // Проверка на валидацию полей формы
-            if (!form.checkValidity()) {
-                form.reportValidity();
-                return;
-            }
-
-            // Отправка формы через submit
-            form.action = 'https://formsubmit.co/itsacheekycake@gmail.com';
-            form.method = 'POST';
-            form.submit();
-        });
-
-        // Показать сообщение об успешной отправке
-        function showSuccessMessage() {
-            const successMessage = document.querySelector('.sent-message');
-            successMessage.style.display = 'block';
-            setTimeout(() => successMessage.style.display = 'none', 5000); // скрыть через 5 секунд
+  <script>
+    function handleFormSubmission(formId, termsId, buttonId, errorMessageSelector, sentMessageSelector) {
+      const form = document.getElementById(formId);
+      const termsCheckbox = document.getElementById(termsId);
+      const submitButton = document.getElementById(buttonId);
+  
+      // Обработчик отправки формы
+      form.addEventListener('submit', function(event) {
+        if (!termsCheckbox.checked) {
+          event.preventDefault(); // Останавливаем отправку формы
+          alert("Please accept the terms and conditions to proceed.");
+        } else {
+          document.querySelector(`#${formId} .loading`).style.display = 'block';
+          document.querySelector(`#${formId} .error-message`).style.display = 'none';
+          document.querySelector(`#${formId} .sent-message`).style.display = 'none';
+  
+          // Перехватываем отправку формы и используем fetch API для обработки
+          fetch(form.action, {
+            method: 'POST',
+            body: new FormData(form),
+          })
+          .then(response => response.text())
+          .then(result => {
+            // Отображаем сообщение об успешной отправке
+            document.querySelector(`#${formId} .loading`).style.display = 'none';
+            document.querySelector(`#${formId} .sent-message`).style.display = 'block';
+            form.reset(); // Очищаем форму
+          })
+          .catch(error => {
+            console.error('Error:', error);
+            document.querySelector(`#${formId} .loading`).style.display = 'none';
+            document.querySelector(`#${formId} .error-message`).style.display = 'block';
+          });
         }
-
-        // Показать сообщение об ошибке
-        function showErrorMessage() {
-            const errorMessage = document.querySelector('.error-message');
-            errorMessage.style.display = 'block';
-            setTimeout(() => errorMessage.style.display = 'none', 5000); // скрыть через 5 секунд
-        }
-
-        // Привязка функций показа сообщений к событиям формы
-        form.addEventListener('submit', function(event) {
-            event.preventDefault();
-            const formData = new FormData(form);
-
-            // Показываем загрузку
-            document.querySelector('.loading').style.display = 'block';
-
-            axios.post('https://formsubmit.co/ajax/itsacheekycake@gmail.com', formData)
-                .then(response => {
-                    console.log(response);
-                    showSuccessMessage();
-                    form.reset(); // сбросить форму после успешной отправки
-                })
-                .catch(error => {
-                    console.error(error);
-                    showErrorMessage();
-                })
-                .finally(() => {
-                    // Скрываем загрузку
-                    document.querySelector('.loading').style.display = 'none';
-                });
-        });
-    });
-</script> -->
-
-
-    
+      });
+    }
+  
+    // Инициализация обработки форм
+    handleFormSubmission('cakeOrderForm', 'terms', 'orderButton', '.error-message', '.sent-message');
+    handleFormSubmission('EmailForm', 'terms_2', 'sendButton', '.error-message', '.sent-message');
+  </script>
+  
   
 </body>
 
