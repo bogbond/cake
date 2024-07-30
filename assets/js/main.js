@@ -165,4 +165,44 @@
   window.addEventListener('load', navmenuScrollspy);
   document.addEventListener('scroll', navmenuScrollspy);
 
+
+  function handleFormSubmission(formId, termsId, buttonId, errorMessageSelector, sentMessageSelector) {
+    const form = document.getElementById(formId);
+    const termsCheckbox = document.getElementById(termsId);
+    const submitButton = document.getElementById(buttonId);
+
+    // Обработчик отправки формы
+    form.addEventListener('submit', function(event) {
+      if (!termsCheckbox.checked) {
+        event.preventDefault(); // Останавливаем отправку формы
+        alert("Please accept the terms and conditions to proceed.");
+      } else {
+        document.querySelector(`#${formId} .loading`).style.display = 'block';
+        document.querySelector(`#${formId} .error-message`).style.display = 'none';
+        document.querySelector(`#${formId} .sent-message`).style.display = 'none';
+
+        // Перехватываем отправку формы и используем fetch API для обработки
+        fetch(form.action, {
+          method: 'POST',
+          body: new FormData(form),
+        })
+        .then(response => response.text())
+        .then(result => {
+          // Отображаем сообщение об успешной отправке
+          document.querySelector(`#${formId} .loading`).style.display = 'none';
+          document.querySelector(`#${formId} .sent-message`).style.display = 'block';
+          form.reset(); // Очищаем форму
+        })
+        .catch(error => {
+          console.error('Error:', error);
+          document.querySelector(`#${formId} .loading`).style.display = 'none';
+          document.querySelector(`#${formId} .error-message`).style.display = 'block';
+        });
+      }
+    });
+  }
+
+  // Инициализация обработки форм
+  handleFormSubmission('cakeOrderForm', 'terms', 'orderButton', '.error-message', '.sent-message');
+  handleFormSubmission('EmailForm', 'terms_2', 'sendButton', '.error-message', '.sent-message');
 })();
